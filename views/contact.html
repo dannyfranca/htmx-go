@@ -8,7 +8,7 @@
 
 {{block "contact" .}}
 <div id="contact-{{.Id}}" style="display: flex;">
-    <div hx-delete="/contacts/{{.Id}}" hx-target="#contact-{{.Id}}" hx-swap="outerHTML"
+    <div hx-indicator="#ci-{{.Id}}" hx-delete="/contacts/{{.Id}}" hx-target="#contact-{{.Id}}" hx-swap="outerHTML"
         style="width: 1rem; cursor: pointer;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path fill="none" d="M0 0h24v24H0z" />
@@ -18,6 +18,9 @@
     </div>
     Name: <span>{{.Name}}</span>
     Email: <span>{{.Email}}</span>
+    <div id="ci-{{.Id}}" class="htmx-indicator">
+        <img src="/images/bars.svg" alt="loading" style="width: 1rem">
+    </div>
 </div>
 {{end}}
 
