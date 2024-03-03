@@ -7,9 +7,9 @@
 {{end}}
 
 {{block "contact" .}}
-<div id="contact-{{.Id}}" style="display: flex;">
-    <div hx-indicator="#ci-{{.Id}}" hx-delete="/contacts/{{.Id}}" hx-target="#contact-{{.Id}}" hx-swap="outerHTML"
-        style="width: 1rem; cursor: pointer;">
+<div id="contact-{{.Id}}" class="contact" style="display: flex;">
+    <div hx-indicator="#ci-{{.Id}}" hx-delete="/contacts/{{.Id}}" hx-target="#contact-{{.Id}}"
+        hx-swap="outerHTML swap:500ms" style="width: 1rem; cursor: pointer;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path fill="none" d="M0 0h24v24H0z" />
             <path
